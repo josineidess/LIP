@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int vetor_geral[20];
+int vetora[20];
+int vetorb[20];
+int vetorc[20];
+int numero;
+int conta = 0, contb = 0, contc = 0;
+
+int main() {
+  for (int e = 0; e < 20; e++) {
+    cin >> numero;
+    vetor_geral[e] = numero;
+  }
+  for (int e = 0; e < 20; e++) {
+    if (vetor_geral[e] % 3 == 0 || vetor_geral[e] % 4 == 0) {
+      if (vetor_geral[e] % 3 == 0) {
+        vetora[conta] = vetor_geral[e];
+        conta++;
+      }
+      if (vetor_geral[e] % 4 == 0) {
+        vetorb[contb] = vetor_geral[e];
+        contb++;
+      }
+    } else {
+      vetorc[contc] = vetor_geral[e];
+      contc++;
+    }
+  }
+  cout << "a)";
+  for (int e = 0; e < conta; e++) {
+    cout << vetora[e];
+    if (e != (conta - 1)) {
+      cout << ",";
+    }
+  }
+  cout << "\nb)";
+  for (int e = 0; e < contb; e++) {
+    cout << vetorb[e];
+    if (e != (contb - 1)) {
+      cout << ",";
+    }
+  }
+  cout << "\nc)";
+  for (int e = 0; e < contc; e++) {
+    cout << vetorc[e];
+    if (e != (contc - 1)) {
+      cout << ",";
+    }
+
+  }
+  return 0;
+}
