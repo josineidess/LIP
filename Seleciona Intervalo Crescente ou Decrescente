@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+int vetor[10];
+int o, p, u, n;
+int main() {
+  for (int e = 0; e < 10; e++) {
+    cin >> n;
+    vetor[e] = n;
+  }
+  do {
+  cin >> o;
+  cin >> p;
+  cin >> u;
+  if (o != 0) {
+    if (o == 1) {
+      for (int e = p - 1; e < u; e++) {
+        cout << vetor[e] << " ";
+      }
+    } else {
+      for (int e = 10-p; e >= 10-u; e--) {
+        cout << vetor[e] << " ";
+      }
+    }
+  }
+  } while (o != 0);
+
+}
