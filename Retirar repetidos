@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int tamanho,vetor1[20],vetor2[2];
+
+int main() {
+  cin >> tamanho;
+  for(int e = 0;e < tamanho;e++){
+    cin >> vetor1[e];
+  }
+  vetor2[0] = vetor1[0];
+    for(int e = 1;e < tamanho;e++){
+         vetor2[e] = vetor1[e];
+        for(int i = 0;i < e;i++){
+            if(vetor1[e] == vetor2[i]){
+                vetor2[e]=0;
+            }
+        }
+        
+    }
+    for(int e = 0;e < tamanho;e++){
+        if(vetor2[e]!=0){
+            cout << vetor2[e] << " ";
+        }
+    }
+  return 0;
+
+}
