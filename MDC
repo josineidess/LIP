@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int n1, n2,n_ma,n_me,maior, menor, resto;
+
+int main() {
+  cin >> n1;
+
+  cin >> n2;
+
+  if (n1 > n2) {
+    maior = n1;
+    menor = n2;
+  } else {
+    maior = n2;
+    menor = n1;
+  }
+    n_ma = maior;
+    n_me = menor;
+    
+  if (n1 == 0 || n2 == 0) {
+    if (n1 == 0) {
+      resto = 0;
+      menor = n2;
+    } else {
+      resto = 0;
+      menor = n1;
+    }
+  } else {
+    resto = maior % menor;
+    while (resto != 0) {
+      maior = menor;
+      menor = resto;
+      resto = maior % menor;
+      if (resto == 0) {
+        break;
+      }
+    }
+  }
+  cout << "MDC("<<n_ma<<","<<n_me<<") = "<<menor << endl;
+  return 0;
+
+}
