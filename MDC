@@ -40,5 +40,4 @@ int main() {
   }
   cout << "MDC("<<n_ma<<","<<n_me<<") = "<<menor << endl;
   return 0;
-
 }
