@@ -5,6 +5,7 @@ using namespace std;
 
 int n,pos=0,pos_invertido=0,pos_invertido_invertida=0,invertido,prod,bin,bin_invertido;
 
+
 bool ehPrimo(int n);
 void posicao(int n,int& posicao);
 int digitos(int n);
