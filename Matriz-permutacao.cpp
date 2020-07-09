@@ -15,15 +15,10 @@ int main() {
     }
   }
 
-  if (soTemZeroUm(mat, t)) {
-    cout << "só tem 0 e 1" << endl;
+  if (compara(mat, t) && soTemZeroUm(mat, t)) {
+    cout << "É matriz de permutação" << endl;
   } else {
-    cout << "não tem só 0 e 1" << endl;
-  }
-  if (compara(mat, t)) {
-    cout << "permuta" << endl;
-  } else {
-    cout << "nao permuta" << endl;
+    cout << "Não é matriz de permutação" << endl;
   }
   return 0;
 }
@@ -49,7 +44,11 @@ bool soTemUmUmLinha(int linha[], int t) {
   if (quant > 1) {
     return false;
   } else {
-    return true;
+    if (quant == 0) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }
 
